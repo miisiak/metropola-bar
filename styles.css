@@ -296,6 +296,10 @@ h2, h3, p {
         text-align: center;
         margin: 1em 0;
     }
+    .map {
+        margin: 1em 0;
+        width: 60%; /* Change width to 60% */
+    }
     footer {
         text-align: center;
     }
