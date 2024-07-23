@@ -286,20 +286,26 @@ h2, h3, p {
         font-size: 1.5rem;
     }
     .card {
-        width: 60%; /* Change width to 60% */
+        width: 70%; /* Change width to 60% */
         height: auto;
     }
     .card-image1, .card-image2, .card-image3 {
-        height: 200px;
+        height: 230px;
     }
     .location-text {
         text-align: center;
-        margin: 1em 0;
     }
-    .map {
-        width: 50%; /* Change width to 60% */
+    iframe{
+        height:250px;
+        width:350px;
     }
     footer {
         text-align: center;
+    }
+}
+@media (max-width: 380px) {
+    iframe{
+        height:200px;
+        width:300px; 
     }
 }
