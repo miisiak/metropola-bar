@@ -9,6 +9,46 @@ body {
 
 header {
     position: relative;
+    height: 100vh; /* Ensure header has a fixed height */
+    background-image: url('metro2.png'); /* Default background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    position: absolute;
+    left: 42%;
+    top: 10px;
+    transform: translateX(-50%);
+    animation: slideUp 2s ease-out forwards;
+}
+
+.logo {
+    width: 280px;
+    height: 280px;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+header {
+    position: relative;
 }
 
 .image-container {
@@ -18,14 +58,6 @@ header {
 .header-image {
     width: 100%;
     height: auto;
-}
-
-.logo-container {
-    position: absolute;
-    top: 10px;
-    left: 42%;
-    transform: translateX(-50%);
-    animation: slideUp 2s ease-out forwards;
 }
 
 .logo {
@@ -149,19 +181,6 @@ header {
         opacity: 1;
     }
 }
-
-header h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5em 1em;
-    border-radius: 10px;
-    margin-top: 10%;
-}
-
 .actions {
     padding: 2em 0;
 }
@@ -334,32 +353,31 @@ h2, h3, p {
         width: 100%;
         max-width: 100%;
     }
-    .prev, .next {
-        margin-top: -32px;
-        font-size: 24px;
-        padding: 12px;
-    }
+
     .content-wrapper {
         flex-direction: column;
         align-items: center;
     }
     .textik, .gallery {
-        max-width: 100%;
         text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
     }
     header h1 {
         font-size: 1.5rem;
     }
-    .header-image {
-        width: 270%;
-        height: 300%;
+    .logo-container {
+        left: 30%;
+        top:20%;
+    }
+    header {
+        background-image: url('6.png'); /* Change the background image for mobile */
+        background-position: center; /* Adjust image focus */
     }
     iframe {
         height: 250px;
@@ -392,9 +410,13 @@ h2, h3, p {
     }
 }
 
+
 @media (max-width: 380px) {
     iframe {
         height: 200px;
         width: 300px;
     }
+    .logo-container {
+        left: 28%;
+}
 }
